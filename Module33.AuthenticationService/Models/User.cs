@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Module33.AuthenticationService
+namespace Module33.AuthenticationService.Models
 {
     public class User
     {
@@ -15,5 +15,9 @@ namespace Module33.AuthenticationService
         public string Email { get; set; }
 
         public string Password { get; set; }
+
+        public int RoleId { get; set; }
+
+        public Role Role { get; set; }
     }
 }
