@@ -25,7 +25,7 @@ namespace Module33.AuthenticationService.Models.Repositopries
                     Id = Guid.NewGuid(),
                     Name = "Иван",
                     SurName = "Иванов",
-                    Email = "ivan@ruboard.ru",
+                    Email = "ivan@bord.ru",
                     Login = "ivanov",
                     Password = "11111122222qq"
                 },
@@ -34,7 +34,7 @@ namespace Module33.AuthenticationService.Models.Repositopries
                     Id = Guid.NewGuid(),
                     Name = "Darko",
                     SurName = "Volovich",
-                    Email = "volodar@yahoo.com",
+                    Email = "volodar@oohya.com",
                     Login = "Dark",
                     Password = "123qweasdzxc"
                 }
