@@ -19,25 +19,36 @@ namespace Module33.AuthenticationService.Models.Repositopries
                     SurName = "Testov",
                     Email = "Test@tester.com",
                     Login = "Test",
-                    Password = "1"
+                    Password = "1",
+                    Role = new Role() {
+                        Id = 1,
+                        Name = "Пользователь"
+                    }
                 },
                 new()  {
                     Id = Guid.NewGuid(),
                     Name = "Иван",
                     SurName = "Иванов",
                     Email = "ivan@bord.ru",
-                    Login = "ivanov",
-                    Password = "11111122222qq"
+                    Login = "iva",
+                    Password = "111",
+                    Role = new Role() {
+                        Id = 1,
+                        Name = "Администратор"
+                    }
                 },
-                new()
-                {
+                new() {
                     Id = Guid.NewGuid(),
                     Name = "Darko",
                     SurName = "Volovich",
                     Email = "volodar@oohya.com",
                     Login = "Dark",
-                    Password = "123qweasdzxc"
-                }
+                    Password = "123qweasdzxc",
+                    Role = new Role() {
+                        Id = 1,
+                        Name = "Пользователь"
+                    }
+                }   
             };
         }
 

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Module33.AuthenticationService.Exceptions;
 using Module33.AuthenticationService.Models;
 using Module33.AuthenticationService.Models.Repositopries;
 using System;
@@ -13,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace Module33.AuthenticationService.Controllers
 {
+    [ExceptionHandler]
     [ApiController]
     [Route("[controller]")]
     public class UserController : ControllerBase
@@ -44,7 +46,7 @@ namespace Module33.AuthenticationService.Controllers
             _logger.WriteError("Попытка добавить пользователя");
         }
 
-        [Authorize]
+        [Authorize(Roles = "Администратор")]
         [HttpGet]
         [Route("viewmodel")]
         public UserViewModel GetUserViewModel()
@@ -70,7 +72,8 @@ namespace Module33.AuthenticationService.Controllers
 
             var claims = new List<Claim>()
             {
-                new(ClaimsIdentity.DefaultNameClaimType, user.Login)
+                new(ClaimsIdentity.DefaultNameClaimType, user.Login),
+                new(ClaimsIdentity.DefaultRoleClaimType, user.Role.Name)
             };
 
             ClaimsIdentity claimsIdentity = new(claims,

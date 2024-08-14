@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Module33.AuthenticationService.Models.Repositopries;
 using Microsoft.AspNetCore.Authentication;
+using Module33.AuthenticationService.Middleware;
 
 namespace Module33.AuthenticationService
 {
@@ -75,6 +76,7 @@ namespace Module33.AuthenticationService
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseLogMiddleware();
 
             app.UseEndpoints(endpoints =>
             {
