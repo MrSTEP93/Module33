@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace Module33.AuthenticationService.Controllers
 {
-    [ExceptionHandler]
+    [ServiceFilter(typeof(ExceptionHandler))]
     [ApiController]
     [Route("[controller]")]
     public class UserController : ControllerBase
