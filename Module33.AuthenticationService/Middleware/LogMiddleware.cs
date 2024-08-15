@@ -16,7 +16,7 @@ namespace Module33.AuthenticationService.Middleware
 
         public async Task Invoke(HttpContext httpContext)
         {
-            _logger.WriteEvent("Я твой Middleware (шатал) запускал");
+            
             _logger.WriteEvent("httpContext.Request.Host " + httpContext.Request.Host);
             _logger.WriteEvent("httpContext.Connection.RemoteIpAddress " + httpContext.Connection.RemoteIpAddress);
             await _next(httpContext);

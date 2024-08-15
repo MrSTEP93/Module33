@@ -15,6 +15,7 @@ using AutoMapper;
 using Module33.AuthenticationService.Models.Repositopries;
 using Microsoft.AspNetCore.Authentication;
 using Module33.AuthenticationService.Middleware;
+using Module33.AuthenticationService.Exceptions;
 
 namespace Module33.AuthenticationService
 {
@@ -31,6 +32,7 @@ namespace Module33.AuthenticationService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<ILogger, Logger>();
+            services.AddScoped<ExceptionHandler>();
 
             var mapperConfig = new MapperConfiguration((v) =>
             {
