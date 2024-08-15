@@ -19,6 +19,7 @@ namespace Module33.AuthenticationService.Controllers
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
+
         private ILogger _logger;
         private IMapper _mapper;
         private IUserRepository _userRepository;
