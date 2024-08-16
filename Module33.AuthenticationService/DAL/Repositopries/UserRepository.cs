@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Module33.AuthenticationService.DAL.Models;
 
-namespace Module33.AuthenticationService.Models.Repositopries
+namespace Module33.AuthenticationService.DAL.Repositopries
 {
     public class UserRepository : IUserRepository
     {
@@ -48,7 +49,7 @@ namespace Module33.AuthenticationService.Models.Repositopries
                         Id = 1,
                         Name = "Пользователь"
                     }
-                }   
+                }
             };
         }
 

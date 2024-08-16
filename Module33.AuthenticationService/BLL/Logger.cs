@@ -2,7 +2,7 @@
 using System.Threading;
 using System;
 
-namespace Module33.AuthenticationService
+namespace Module33.AuthenticationService.BLL
 {
     public class Logger : ILogger
     {

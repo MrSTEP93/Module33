@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
+using Module33.AuthenticationService.BLL;
 
-namespace Module33.AuthenticationService.Exceptions
+namespace Module33.AuthenticationService.BLL.Exceptions
 {
     public class ExceptionHandler : ActionFilterAttribute, IExceptionFilter
     {
@@ -21,7 +22,7 @@ namespace Module33.AuthenticationService.Exceptions
                 message = context.Exception.Message;
             }
             _logger.WriteError(message);
-            
+
             context.Result = new BadRequestObjectResult(message);
         }
     }

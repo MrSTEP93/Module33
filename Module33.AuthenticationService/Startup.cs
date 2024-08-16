@@ -12,10 +12,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using Module33.AuthenticationService.Models.Repositopries;
+using Module33.AuthenticationService;
 using Microsoft.AspNetCore.Authentication;
-using Module33.AuthenticationService.Middleware;
-using Module33.AuthenticationService.Exceptions;
+using Module33.AuthenticationService.DAL.Repositopries;
+using Module33.AuthenticationService.BLL.Middleware;
+using Module33.AuthenticationService.BLL;
+using Module33.AuthenticationService.BLL.Exceptions;
 
 namespace Module33.AuthenticationService
 {
@@ -31,7 +33,7 @@ namespace Module33.AuthenticationService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<ILogger, Logger>();
+            services.AddSingleton<BLL.ILogger, Logger>();
             services.AddScoped<ExceptionHandler>();
 
             var mapperConfig = new MapperConfiguration((v) =>

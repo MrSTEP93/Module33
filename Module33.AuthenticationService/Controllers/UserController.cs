@@ -3,9 +3,12 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Module33.AuthenticationService.Exceptions;
-using Module33.AuthenticationService.Models;
-using Module33.AuthenticationService.Models.Repositopries;
+using Module33.AuthenticationService.BLL;
+using Module33.AuthenticationService.BLL.Exceptions;
+using Module33.AuthenticationService.DAL.Models;
+using Module33.AuthenticationService.DAL.Repositopries;
+
+using Module33.AuthenticationService.PLL;
 using System;
 using System.Collections.Generic;
 using System.Security.Authentication;

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
 
-namespace Module33.AuthenticationService.Middleware
+namespace Module33.AuthenticationService.BLL.Middleware
 {
     public class LogMiddleware
     {
@@ -16,7 +16,7 @@ namespace Module33.AuthenticationService.Middleware
 
         public async Task Invoke(HttpContext httpContext)
         {
-            
+
             _logger.WriteEvent("httpContext.Request.Host " + httpContext.Request.Host);
             _logger.WriteEvent("httpContext.Connection.RemoteIpAddress " + httpContext.Connection.RemoteIpAddress);
             await _next(httpContext);

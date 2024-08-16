@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Net.Mail;
+using Module33.AuthenticationService.DAL.Models;
 
-namespace Module33.AuthenticationService.Models
+namespace Module33.AuthenticationService.PLL
 {
     public class UserViewModel
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Module33.AuthenticationService
+namespace Module33.AuthenticationService.BLL
 {
     public class LoggerMy : ILogger
     {

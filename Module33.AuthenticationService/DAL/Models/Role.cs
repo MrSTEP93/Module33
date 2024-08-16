@@ -1,4 +1,4 @@
-﻿namespace Module33.AuthenticationService.Models
+﻿namespace Module33.AuthenticationService.DAL.Models
 {
     public class Role
     {

@@ -1,4 +1,4 @@
-﻿namespace Module33.AuthenticationService
+﻿namespace Module33.AuthenticationService.BLL
 {
     public interface ILogger
     {
